@@ -1,26 +1,20 @@
-import {
-  HeaderContainer,
-  Logo,
-  LocationBox,
-  HeaderRight,
-  CartBox,
-} from './styles'
+import * as S from './styles'
 import logoCoffeDelivery from '../../assets/Logo.svg'
-import { ShoppingCart, MapPin } from '@phosphor-icons/react'
+import * as Icon from '@phosphor-icons/react'
 
 export function Header() {
   return (
-    <HeaderContainer>
-      <Logo src={logoCoffeDelivery} alt="logo do coffee delivery" />
-      <HeaderRight>
-        <LocationBox>
-          <MapPin size={22} />
+    <S.HeaderContainer>
+      <S.Logo src={logoCoffeDelivery} alt="logo do coffee delivery" />
+      <S.HeaderRight>
+        <S.LocationBox>
+          <Icon.MapPin size={22} />
           <p>Porto Alegre, RS</p>
-        </LocationBox>
-        <CartBox>
-          <ShoppingCart size={22} />
-        </CartBox>
-      </HeaderRight>
-    </HeaderContainer>
+        </S.LocationBox>
+        <S.CartBox>
+          <Icon.ShoppingCart size={22} />
+        </S.CartBox>
+      </S.HeaderRight>
+    </S.HeaderContainer>
   )
 }
