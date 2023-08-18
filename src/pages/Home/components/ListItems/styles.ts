@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
-export const ListItemsContianer = styled.div``
+export const ListItemsContianer = styled.div`
+  display: grid;
+`
 
 export const TitleList = styled.div`
   margin-top: 2rem;
