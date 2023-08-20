@@ -26,6 +26,7 @@ export const CardItemWrapper = styled.main`
 export const LabelCharacteristicCotainer = styled.div`
   display: flex;
   gap: 0.25rem;
+  margin-bottom: 1rem;
 `
 
 export const LabelCharacteristic = styled.p`
@@ -45,20 +46,86 @@ export const ProductImage = styled.img`
 `
 
 export const ItemControl = styled.div`
+  width: 100%;
+  margin: 2rem 0 1.25rem 0;
+
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `
 
-export const PriceText = styled.div`
-  display: flex;
-  gap: 0.1rem;
-  p {
+export const ItemCost = styled.div`
+  /* width: 5.625rem; */
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+
+  span {
     color: ${(props) => props.theme.baseText};
-    font-weight: 400;
-    font-family: 'Roboto Mono', sans-serif;
-    font-size: 1.5rem;
+    line-height: 1.3;
+
+    &:first-child {
+      margin-right: 0.2rem;
+      font-size: 0.875rem;
+      font-weight: bold;
+      font-family: 'Roboto Mono', sans-serif;
+    }
+    &:last-child {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
   }
-  > p {
-    font-size: 0.875rem;
+`
+export const CartButton = styled.button`
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+
+  padding: 0.5rem;
+  background: ${(props) => props.theme.purpleDark};
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: ${(props) => props.theme.baseCard};
+
+  :hover {
+    border-radius: 6px;
+    background: ${(props) => props.theme.purple};
+  }
+`
+
+export const ItemQuantity = styled.div`
+  background: ${(props) => props.theme.baseButton};
+  border-radius: 6px;
+  padding: 0 0.5rem;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  text-align: center;
+
+  span {
+    width: 1.25rem;
+    color: ${(props) => props.theme.baseTitle};
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  button {
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: ${(props) => props.theme.purple};
+    :hover {
+      color: ${(props) => props.theme.purpleDark};
+    }
   }
 `

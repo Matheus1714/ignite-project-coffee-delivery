@@ -1,6 +1,7 @@
 import * as S from './styles'
 import { Item } from '../../../../database/data'
 import { ShoppingCart } from '@phosphor-icons/react'
+import * as Icon from '@phosphor-icons/react'
 
 interface CardItemProps {
   item: Item
@@ -22,18 +23,22 @@ export function CardItem({ item }: CardItemProps) {
       <h1>{item.name}</h1>
       <p>{item.description}</p>
       <S.ItemControl>
-        <S.PriceText>
-          <p>R$</p>
-          <strong>{item.price}</strong>
-        </S.PriceText>
-        <div>
-          <div>
-            <button>-</button>
-            <span>1</span>
-            <button>+</button>
-          </div>
+        <S.ItemCost>
+          <span>R$</span>
+          <span>{item.price.toFixed(2)}</span>
+        </S.ItemCost>
+        <S.ItemQuantity>
+          <button>
+            <Icon.Minus size={14} />
+          </button>
+          <span>1</span>
+          <button>
+            <Icon.Plus size={14} />
+          </button>
+        </S.ItemQuantity>
+        <S.CartButton>
           <ShoppingCart size={22} />
-        </div>
+        </S.CartButton>
       </S.ItemControl>
     </S.CardItemWrapper>
   )

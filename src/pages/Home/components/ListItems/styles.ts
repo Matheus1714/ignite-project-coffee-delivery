@@ -6,7 +6,7 @@ export const ListItemsContianer = styled.div`
 
 export const TitleList = styled.div`
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3.375rem;
   h1 {
     color: ${(props) => props.theme.baseSubtitle};
     font-size: 2rem;
@@ -16,7 +16,8 @@ export const TitleList = styled.div`
 
 export const Items = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 2rem;
+  margin-bottom: 10rem;
 `
