@@ -1,6 +1,8 @@
 import * as S from './styles'
-import * as Icon from '@phosphor-icons/react'
+// import * as Icon from '@phosphor-icons/react'
 import { data } from '../../database/data'
+import { FormAdress } from './components/FormAdress'
+import { Payment } from './components/Payment'
 
 export function Order() {
   const itemsOrder = [data[0], data[1]]
@@ -11,26 +13,8 @@ export function Order() {
     <S.FormCotainer>
       <S.AdditionalInformation>
         <h1>Complete seu pedido</h1>
-        <S.PaymentMethod>
-          <header>
-            <Icon.MapPinLine size={22} />
-            <div>
-              <p>Endereço de Entrega</p>
-              <p>Informe o endereço onde deseja receber seu pedido</p>
-            </div>
-          </header>
-        </S.PaymentMethod>
-        <S.AdressInformation>
-          <header>
-            <Icon.CurrencyDollar size={22} />
-            <div>
-              <p>Pagamento</p>
-              <p>
-                O pagamento é feito na entrega. Escolha a forma que deseja pagar
-              </p>
-            </div>
-          </header>
-        </S.AdressInformation>
+        <FormAdress />
+        <Payment />
       </S.AdditionalInformation>
       <S.CardOrder>
         <h1>Cafés selecionados</h1>
