@@ -8,9 +8,11 @@ export function ListItems() {
       <S.TitleList>
         <h1>Nossos cafés</h1>
       </S.TitleList>
-      {data.map((coffee) => (
-        <CardItem key={coffee.id} item={coffee} />
-      ))}
+      <S.Items className="items">
+        {data.map((coffee) => (
+          <CardItem key={coffee.id} item={coffee} />
+        ))}
+      </S.Items>
     </S.ListItemsContianer>
   )
 }

@@ -13,3 +13,10 @@ export const TitleList = styled.div`
     line-height: 1.3;
   }
 `
+
+export const Items = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+`
